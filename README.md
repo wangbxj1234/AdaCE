@@ -10,7 +10,7 @@ Official [PyTorch](https://pytorch.org/) implementation of  AdaCE
 </div>
 
 > **Top**: Framework of **AdaCE**: Adapting raw EEG data into text and image for tuning pre-trained large transformer model.<br>
-> **Bottom**: EEG-to-Image adapter: Converting EEG data into images to maintain the complete feature information.
+> **Bottom**: EEG-to-Image adapter: Converting EEG data into images to maintain the complete feature information.<br>
 > **Our code will be released soon.**
 
 ------
