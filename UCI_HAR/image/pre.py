@@ -53,7 +53,7 @@ X_train, X_val, y_train, y_val = train_test_split(train_data, train_labels, test
 
 
 
-#First part of our AdaCE
+#First part of our AdaCT
 #!pip install huggingface_hub
 #!huggingface-cli login
 
@@ -72,4 +72,3 @@ test_dataset = Dataset.from_dict(testset)
 
 #test_dataset.push_to_hub("wbxlala/har3", "test")
 #train_dataset.push_to_hub("wbxlala/har3", "train")
-

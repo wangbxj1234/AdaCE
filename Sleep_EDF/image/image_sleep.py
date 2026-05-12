@@ -12,7 +12,7 @@ trainset=torch.load('/mnt/beegfs/bwangbo/huggingface/dataverse_files/train.pt')
 testset =torch.load('/mnt/beegfs/bwangbo/huggingface/dataverse_files/test.pt')
 
 
-def AdaCE(dataset):
+def AdaCT(dataset):
     dat_dict1 = dict()
     dat_dict1["image"] = dataset['samples'].repeat(1, 3, 1).view(dataset['samples'].size(0),3, 30, 100)
     dat_dict1["label"] = dataset['labels']
@@ -30,8 +30,8 @@ def AdaCE(dataset):
         new_dataset.append(new_example)
     return new_dataset
 
-train_dataset = AdaCE(trainset)
-test_dataset = AdaCE(testset)
+train_dataset = AdaCT(trainset)
+test_dataset = AdaCT(testset)
 
 
 

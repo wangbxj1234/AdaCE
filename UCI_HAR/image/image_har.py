@@ -35,8 +35,8 @@ def compute_metrics(eval_preds):
     accuracy= metric1.compute(predictions=predictions, references=labels)["accuracy"]
     return { "f1": f1, "accuracy": accuracy}
 
-#### second part of AdaCE
-def AdaCE(dataset):
+#### second part of AdaCT
+def AdaCT(dataset):
     new_dataset = []
     for image,label in zip(
         dataset['image'],
@@ -49,8 +49,8 @@ def AdaCE(dataset):
         new_dataset.append(new_example)
     return new_dataset
 
-train_dataset = AdaCE(dataset['train'])
-test_dataset = AdaCE(dataset['test'])
+train_dataset = AdaCT(dataset['train'])
+test_dataset = AdaCT(dataset['test'])
 #val_dataset = convert_to_new_format_1(encoded_val_dataset)
 
 training_args = TrainingArguments(
@@ -82,4 +82,3 @@ trainer = Trainer(
 start_time = datetime.now()
 trainer.train()
 print(f"Training time is : {datetime.now()-start_time}")
-
